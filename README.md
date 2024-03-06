@@ -2,7 +2,7 @@ Ascenda: A Student Schedule Organizer
 
 Before you begin, ensure you have the following installed:
 
-- Node.js (version >=14.17.0).
+- Node.js (version >=20.11.1).
 
 1. **Clone the repository**
 
