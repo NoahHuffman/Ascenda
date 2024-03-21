@@ -2,7 +2,7 @@ Ascenda: A Student Schedule Organizer
 
 Before you begin, ensure you have the following installed:
 
-- Node.js (version >=20.11.1).
+- Node.js (version >=20.11.1) & NPM
 
 1. **Clone the repository**
 
@@ -31,5 +31,5 @@ Before you begin, ensure you have the following installed:
 4. **Run the development server**
    ```bash
    npm run dev
-   Open http://localhost:3000 with your browser to see the result.
+   Open http://localhost:5173 with your browser to see the result.
    ```
