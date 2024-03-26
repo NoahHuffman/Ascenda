@@ -1,37 +1,37 @@
 {
-    "CPSC 1990": {
-        "type": "class",
-        "name": "Computer Science, a Binary Adventure",
-        "days": "mwf",
-        "time": "10a-11a",
-        "priority": ""
+    "class": {
+        "CPSC 1990": {
+            "name": "Intro to Computer Science",
+            "days": "mwf",
+            "time": "10-11",
+            "priority": ""
+        },
+        "CPEN 3220": {
+            "name": "Digital Logic Design",
+            "days": "th",
+            "time": "1-2",
+            "priority": ""
+        },
+        "MGT 2000": {
+            "name": "Excel Basics",
+            "days": "f",
+            "time": "11:59",
+            "priority": ""
+        },
+        "ASTR 4000": {
+            "name": "Astronomy: The Stars",
+            "days": "tth",
+            "time": "",
+            "priority": ""
+        },
+        "CPSC 2200": {
+            "name": "Data Structures",
+            "days": "mwf",
+            "time": "9-10",
+            "priority": ""
+        }
     },
-    "CPEN 3220": {
-        "type": "class",
-        "name": "Computer Engineering, AGILE",
-        "days": "th",
-        "time": "1p-2p",
-        "priority": ""
-    },
-    "MGT 2000": {
-        "type": "assignment",
-        "name": "Excel Homework #2",
-        "days": "f",
-        "time": "11:59p",
-        "priority": ""
-    },
-    "ASTR 4000": {
-        "type": "assignment",
-        "name": "",
-        "days": "",
-        "time": "",
-        "priority": ""
-    },
-    "CPSC 2200": {
-        "type": "assignment",
-        "name": "",
-        "days": "mwf",
-        "time": "",
-        "priority": ""
+    "assignment": {
+        
     }
 }
