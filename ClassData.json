@@ -1,0 +1,37 @@
+{
+    "CPSC 1990": {
+        "type": "class",
+        "name": "Computer Science, a Binary Adventure",
+        "days": "mwf",
+        "time": "10a-11a",
+        "priority": ""
+    },
+    "CPEN 3220": {
+        "type": "class",
+        "name": "Computer Engineering, AGILE",
+        "days": "th",
+        "time": "1p-2p",
+        "priority": ""
+    },
+    "MGT 2000": {
+        "type": "assignment",
+        "name": "Excel Homework #2",
+        "days": "f",
+        "time": "11:59p",
+        "priority": ""
+    },
+    "ASTR 4000": {
+        "type": "assignment",
+        "name": "",
+        "days": "",
+        "time": "",
+        "priority": ""
+    },
+    "CPSC 2200": {
+        "type": "assignment",
+        "name": "",
+        "days": "mwf",
+        "time": "",
+        "priority": ""
+    }
+}
