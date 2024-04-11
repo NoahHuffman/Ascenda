@@ -103,6 +103,9 @@ function App() {
   const handleCreateEvent = () => {
     console.log("Create event clicked");
   };
+  const handleEventAdd = (event) => {
+    setEvents([...events, event]); // Add the new event to the events array
+  };
 
   // Placeholder for Theme button's onClick event handler
   const handleThemeChange = (newTheme) => {
@@ -134,7 +137,12 @@ function App() {
         onRefresh={handleRefreshImports}
         onClose={handleLogout}
       />
-      <Calendar events={events} setEvents={setEvents} theme={theme} />
+      <Calendar
+        events={events}
+        setEvents={setEvents}
+        theme={theme}
+        handleEventAdd={handleEventAdd}
+      />
     </div>
   );
 }
