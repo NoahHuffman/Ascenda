@@ -32,14 +32,20 @@
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     z-index: 100;
-    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
   }
   
   .dropdown-item {
     display: block;
     margin: 10px 0;
+    background: none;
+    color: #5D7179;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
     /* Additional styling */
   }
   .card-header{
@@ -49,23 +55,28 @@
   }
   .notification-dropdown {
     position: absolute;
-    top: 50px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
+    top: 60px; /* Adjust as needed */
+    right: 80px; /* Adjust as needed */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
     z-index: 100; /* Higher than other components */
+    text-align: left;
   }
+
   
   .notification-header {
+    text-align: center;
     font-weight: bold;
     margin-bottom: 10px;
+    color:#5D7179;
   }
   
   .notification-list {
     list-style: none;
     padding: 0;
+    color:#d81010;
   }
   
   .notification-item {

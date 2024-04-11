@@ -32,6 +32,24 @@ function App() {
       end: "2024-04-18T14:00:00",
       allDay: false,
     },
+    {
+      title: "Tech Symposium",
+      start: "2024-04-15T09:00:00",
+      end: "2024-04-15T14:00:00",
+      allDay: false,
+    },
+    {
+      title: "CPEN4700 Class",
+      start: "2024-04-15T14:15:00",
+      end: "2024-04-15T15:30:00",
+      allDay: false,
+    },
+    {
+      title: "CPEN4700 Class",
+      start: "2024-04-17T14:15:00",
+      end: "2024-04-17T15:30:00",
+      allDay: false,
+    },
     // ... other assignments
   ];
 
@@ -84,7 +102,6 @@ function App() {
   // Placeholder for Create button's onClick event handler
   const handleCreateEvent = () => {
     console.log("Create event clicked");
-    // You'll need to implement the logic for creating a new event here
   };
 
   // Placeholder for Theme button's onClick event handler
