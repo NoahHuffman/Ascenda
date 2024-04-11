@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    margin: 0 10px;
+    
     background-color:#C0D3DB;
   }
 
@@ -11,7 +11,7 @@
     padding: 10px 20px;
   }
 .custom-button {
-    background-color: #f0f0f0; /* Example background color, match this to your design */
+    background-color: #f0f0f0;
     border: none;
     border-radius: 30px;
     padding: 10px 20px;
@@ -19,6 +19,7 @@
     cursor: pointer;
     font-family: 'Verdana';
     font-weight:bold;
+    font-size: 15px;
     color:#5D7179;
     box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
   }
@@ -46,7 +47,7 @@
     border: none;
     padding: 0;
     text-decoration: underline;
-    /* Additional styling */
+
   }
   .card-header{
     font-weight:bold;
@@ -55,13 +56,13 @@
   }
   .notification-dropdown {
     position: absolute;
-    top: 60px; /* Adjust as needed */
-    right: 80px; /* Adjust as needed */
+    top: 60px; 
+    right: 80px;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    z-index: 100; /* Higher than other components */
+    z-index: 100;
     text-align: left;
   }
 
@@ -81,18 +82,18 @@
   
   .notification-item {
     padding: 5px 0;
-    /* Additional styling */
+
   }
   .Calendar{
     margin: 0 20px;
   }
 
   .event-form-container {
-    position: fixed; /* Fixed position to overlay on top of other content */
-    top: 50%;       /* Center the form vertically */
-    left: 50%;      /* Center the form horizontally */
-    transform: translate(-50%, -50%); /* Adjust the form position to truly center it */
-    z-index: 1000;   /* Make sure it's above other elements */
+    position: fixed;
+    top: 50%;      
+    left: 50%;      
+    transform: translate(-50%, -50%); 
+    z-index: 1000;  
     background: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -124,15 +125,47 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #5D7179;
     color: white;
   }
   
   .event-form-container button[type="button"] {
-    background-color: #6c757d;
+    background-color: #ff0000;
   }
   
   .event-form-container button:hover {
     opacity: 0.8;
   }
+
+  .fc .fc-view-harness {
+    background-color: #f0f0f0; 
+  }
   
+
+  .fc-view, .fc-view > table {
+    background-color: #f0f0f0; 
+  }
+
+  .fc-header-toolbar .fc-toolbar-title {
+    font-family: 'Verdana';  
+    color: white;  
+    font-size: 30px;
+    text-shadow: 2px 2px #5D7179;
+}
+
+.fc .fc-button {
+  color: #ffffff; 
+  background-color: #5D7179;  
+  border: 1px solid #4b6069;  
+  border-radius: 30px;  
+  padding: 8px 12px;  
+  font-family: 'Verdana'; 
+  font-size: 14px;  
+  transition: background-color 0.3s ease;  
+}
+
+.fc .fc-button:hover {
+  background-color: #87a4b0;  
+  border-color: #4b6069;  
+}
+
