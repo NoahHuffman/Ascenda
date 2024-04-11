@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProfileDropdownCard from "./components/ProfileDropdownCard";
 import "./assets/styles.css";
 import Button from "./components/Button";
@@ -14,6 +14,7 @@ function App() {
     useState(false);
   const [events, setEvents] = useState([]); // Added state for events
   const [theme, setTheme] = useState("standard"); // Added state for theme
+  const [notifications, setNotifications] = useState([]);
 
   // Dummy data for classes and assignments to be used in updateClasses and updateAssignments
 
@@ -51,6 +52,12 @@ function App() {
       end: "2024-04-17T15:30:00",
       allDay: false,
     },
+    {
+      title: "CPEN4700 Class",
+      start: "2024-04-11T14:15:00",
+      end: "2024-04-11T15:30:00",
+      allDay: false,
+    },
     // ... other assignments
   ];
 
@@ -84,12 +91,6 @@ function App() {
     setNotificationDropdownVisible(!isNotificationDropdownVisible);
     if (isProfileDropdownVisible) setProfileDropdownVisible(false);
   };
-  const notifications = [
-    "CPSC 3600 Assignment due @12:59pm",
-    "Tech Symposium today @9:30am",
-    "CPEN4700 Class today @2:15pm",
-    // ... any other notifications
-  ];
   const handleLogout = () => {
     console.log("Logout clicked");
     setProfileDropdownVisible(false);
@@ -111,10 +112,35 @@ function App() {
 
   const [isEventFormVisible, setIsEventFormVisible] = useState(false);
 
-  // Modify handleCreateEvent to toggle the visibility of EventForm
   const handleCreateEvent = () => {
     setIsEventFormVisible(true);
   };
+
+  useEffect(() => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const todaysEvents = events.filter((event) => {
+      const eventDate = new Date(event.start);
+      eventDate.setHours(0, 0, 0, 0);
+      return (
+        eventDate.getTime() === today.getTime() ||
+        (eventDate.toDateString() === today.toDateString() && !event.allDay)
+      );
+    });
+
+    const newNotifications = todaysEvents.map((event) => {
+      const eventTime = new Date(event.start);
+      const startTime = eventTime.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      });
+      return `${event.title} starts at ${startTime}`;
+    });
+
+    setNotifications(newNotifications);
+  }, [events]);
 
   return (
     <div className="App">
@@ -133,7 +159,7 @@ function App() {
       </header>
       <NotificationsCard
         isVisible={isNotificationDropdownVisible}
-        notifications={notifications}
+        notifications={notifications} // Now this will update based on today's events
         onClose={() => setNotificationDropdownVisible(false)}
       />
       <ProfileDropdownCard

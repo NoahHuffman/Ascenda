@@ -22,6 +22,7 @@ function EventForm({ onClose, onEventAdd }) {
 
   return (
     <div className="event-form-container">
+        <div className="create-header">Create</div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -30,14 +31,16 @@ function EventForm({ onClose, onEventAdd }) {
           onChange={(e) => setTitle(e.target.value)}
           required
         />
-        <label>
+        <div className="checkbox">
+        <label >
           All Day
-          <input
+          <input 
             type="checkbox"
             checked={allDay}
             onChange={(e) => setAllDay(e.target.checked)}
           />
         </label>
+        </div>
         <input
           type="date"
           value={date}

@@ -99,13 +99,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     width: 300px; /* Fixed width for the form */
+    font-family:'Verdana';
   }
-  
+  .create-header{
+    font-size:20px;
+    font-family:'Verdana';
+    padding-bottom:10px;
+    font-weight:bold;
+    color:#5D7179;
+  }
   .event-form-container form {
     display: flex;
     flex-direction: column;
   }
   
+  .checkbox label {
+   margin:10px;
+}
+
+
   .event-form-container input[type="text"],
   .event-form-container input[type="date"],
   .event-form-container input[type="time"] {
@@ -130,7 +142,7 @@
   }
   
   .event-form-container button[type="button"] {
-    background-color: #ff0000;
+    background-color: #011720;
   }
   
   .event-form-container button:hover {
