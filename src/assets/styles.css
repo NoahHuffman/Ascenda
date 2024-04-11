@@ -178,7 +178,9 @@
   padding: 8px 12px;  
   font-family: 'Verdana'; 
   font-size: 14px;  
-  transition: background-color 0.3s ease;  
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+    
 }
 
 .fc .fc-button:hover {
