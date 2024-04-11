@@ -7,6 +7,7 @@ import ProfileIcon from "./components/ProfileIcon";
 import NotificationsCard from "./components/NotificationsCard";
 import Calendar from "./components/Calendar";
 import EventForm from "./components/EventForm";
+import logoIcon from "./assets/logo.png";
 
 function App() {
   const [isProfileDropdownVisible, setProfileDropdownVisible] = useState(false);
@@ -180,14 +181,17 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <div>
+        <div className="header-group left">
           <Button label="Create" onClick={handleCreateEvent} />
           <Button
             label="Themes"
             onClick={() => handleThemeChange("bootstrap")}
           />
         </div>
-        <div>
+        <div className="header-group center">
+          <img src={logoIcon} alt="Logo" style={{ width: "100px" }} />
+        </div>
+        <div className="header-group right">
           <NotificationButton onClick={handleNotificationClick} />
           <ProfileIcon onClick={handleProfileClick} />
         </div>

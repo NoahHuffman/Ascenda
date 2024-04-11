@@ -4,12 +4,36 @@
     background-color:#C0D3DB;
   }
 
-  .header{
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
   }
+  
+  .header-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-group.left {
+    /* Aligns items to the left */
+    justify-content: flex-start;
+    flex: 1;
+  }
+  
+  .header-group.center {
+    /* Centers the logo */
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .header-group.right {
+    /* Aligns items to the right */
+    justify-content: flex-end;
+    flex: 1;
+  }
+  
 .custom-button {
     background-color: #f0f0f0;
     border: none;
