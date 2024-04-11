@@ -19,45 +19,78 @@ function App() {
   // Dummy data for classes and assignments to be used in updateClasses and updateAssignments
 
   const dummyAssignments = [
-    { title: "CPSC3600 Assignment", start: "2024-04-15", allDay: true },
-    { title: "CPSC4900 Assignment", start: "2024-04-17", allDay: true },
-    { title: "MKT 2000 Assignment", start: "2024-04-14", allDay: true },
-    { title: "MKT 2000 Assignment", start: "2024-04-11", allDay: true },
+    {
+      title: "CPSC3600 Assignment",
+      start: "2024-04-15",
+      allDay: true,
+      eventType: "assignment",
+    },
+    {
+      title: "CPSC4900 Assignment",
+      start: "2024-04-17",
+      allDay: true,
+      eventType: "assignment",
+    },
+    {
+      title: "MKT 2000 Assignment",
+      start: "2024-04-14",
+      allDay: true,
+      eventType: "assignment",
+    },
+    {
+      title: "MKT 2000 Assignment",
+      start: "2024-04-11",
+      allDay: true,
+      eventType: "assignment",
+    },
     {
       title: "Math Class",
       start: "2024-04-16T13:00:00",
       end: "2024-04-16T14:00:00",
       allDay: false,
+      eventType: "class",
     },
     {
       title: "Math Class",
       start: "2024-04-18T13:00:00",
       end: "2024-04-18T14:00:00",
       allDay: false,
+      eventType: "class",
     },
     {
       title: "Tech Symposium",
       start: "2024-04-15T09:00:00",
       end: "2024-04-15T14:00:00",
       allDay: false,
+      eventType: "misc",
+    },
+    {
+      title: "Study for CPEN4700",
+      start: "2024-04-16T10:00:00",
+      end: "2024-04-16T12:00:00",
+      allDay: false,
+      eventType: "study",
     },
     {
       title: "CPEN4700 Class",
       start: "2024-04-15T14:15:00",
       end: "2024-04-15T15:30:00",
       allDay: false,
+      eventType: "class",
     },
     {
-      title: "CPEN4700 Class",
+      title: "CPEN4700 Test",
       start: "2024-04-17T14:15:00",
       end: "2024-04-17T15:30:00",
       allDay: false,
+      eventType: "test",
     },
     {
       title: "CPEN4700 Class",
       start: "2024-04-11T14:15:00",
       end: "2024-04-11T15:30:00",
       allDay: false,
+      eventType: "class",
     },
     // ... other assignments
   ];
@@ -69,6 +102,7 @@ function App() {
       start: assignment.start,
       end: assignment.end,
       allDay: assignment.allDay,
+      eventType: assignment.eventType,
     }));
     const filteredAssignments = newAssignments.filter(
       (newAssignment) =>
