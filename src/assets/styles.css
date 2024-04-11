@@ -139,10 +139,12 @@
     cursor: pointer;
     background-color: #5D7179;
     color: white;
+    font-size:15px;
   }
   
   .event-form-container button[type="button"] {
     background-color: #011720;
+    font-size:15px;
   }
   
   .event-form-container button:hover {

@@ -22,7 +22,7 @@ function EventForm({ onClose, onEventAdd }) {
 
   return (
     <div className="event-form-container">
-        <div className="create-header">Create</div>
+        <div className="create-header">Create Event</div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

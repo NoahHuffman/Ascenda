@@ -22,6 +22,7 @@ function App() {
     { title: "CPSC3600 Assignment", start: "2024-04-15", allDay: true },
     { title: "CPSC4900 Assignment", start: "2024-04-17", allDay: true },
     { title: "MKT 2000 Assignment", start: "2024-04-14", allDay: true },
+    { title: "MKT 2000 Assignment", start: "2024-04-11", allDay: true },
     {
       title: "Math Class",
       start: "2024-04-16T13:00:00",
@@ -118,11 +119,11 @@ function App() {
 
   useEffect(() => {
     const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0); // Normalize today to start of day
 
     const todaysEvents = events.filter((event) => {
       const eventDate = new Date(event.start);
-      eventDate.setHours(0, 0, 0, 0);
+      eventDate.setHours(0, 0, 0, 0); // Normalize event date to start of day
       return (
         eventDate.getTime() === today.getTime() ||
         (eventDate.toDateString() === today.toDateString() && !event.allDay)
