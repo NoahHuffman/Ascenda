@@ -153,8 +153,8 @@
 
   .fc .fc-view-harness {
     background-color: #f0f0f0; 
-    border: 5px solid #5D7179;
-    border-radius: 0px; 
+    border: 2px solid #5D7179;
+    border-radius: 2px; 
     color: #5D7179;
   }
   
@@ -197,27 +197,27 @@
   color: #ffffff !important; 
 }
 .fc .fc-event.assignment {
-  background: #35cbfd !important; /* Example: yellow background */
+  background: #35cbfd !important;
 }
 
-/* Style for tests */
+
 .fc .fc-event.test {
   background: #ff0404;
 
 }
 
-/* Style for study sessions */
+
 .fc-event.study {
-  background: #4caf50 !important; /* Example: green background */
+  background: #4caf50 !important; 
 }
 
-/* Style for classes */
+
 .fc-event.class {
-  background: #ecf321 !important; /* Example: blue background */
+  background: #ecf321 !important; 
 }
 
-/* Style for miscellaneous events */
+
 .fc-event.misc {
-  background: #9c27b0 !important; /* Example: purple background */
+  background: #9c27b0 !important; 
 }
 
