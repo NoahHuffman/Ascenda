@@ -21,12 +21,6 @@ function App() {
     { title: "CPSC4900 Assignment", start: "2024-04-17", allDay: true },
     { title: "MKT 2000 Assignment", start: "2024-04-14", allDay: true },
     {
-      title: "MKT 2000 Class",
-      start: "2024-04-05T11:00:00",
-      end: "2024-04-05T11:59:00",
-      allDay: false,
-    },
-    {
       title: "Math Class",
       start: "2024-04-16T13:00:00",
       end: "2024-04-16T14:00:00",
