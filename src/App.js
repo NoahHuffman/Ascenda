@@ -6,6 +6,7 @@ import NotificationButton from "./components/NotificationButton";
 import ProfileIcon from "./components/ProfileIcon";
 import NotificationsCard from "./components/NotificationsCard";
 import Calendar from "./components/Calendar";
+import EventForm from "./components/EventForm";
 
 function App() {
   const [isProfileDropdownVisible, setProfileDropdownVisible] = useState(false);
@@ -99,10 +100,6 @@ function App() {
     setProfileDropdownVisible(false);
   };
 
-  // Placeholder for Create button's onClick event handler
-  const handleCreateEvent = () => {
-    console.log("Create event clicked");
-  };
   const handleEventAdd = (event) => {
     setEvents([...events, event]); // Add the new event to the events array
   };
@@ -110,6 +107,13 @@ function App() {
   // Placeholder for Theme button's onClick event handler
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme);
+  };
+
+  const [isEventFormVisible, setIsEventFormVisible] = useState(false);
+
+  // Modify handleCreateEvent to toggle the visibility of EventForm
+  const handleCreateEvent = () => {
+    setIsEventFormVisible(true);
   };
 
   return (
@@ -137,6 +141,12 @@ function App() {
         onRefresh={handleRefreshImports}
         onClose={handleLogout}
       />
+      {isEventFormVisible && (
+        <EventForm
+          onClose={() => setIsEventFormVisible(false)}
+          onEventAdd={handleEventAdd}
+        />
+      )}
       <Calendar
         events={events}
         setEvents={setEvents}
